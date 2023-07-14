@@ -8,5 +8,5 @@
     //   "prb-math/=node_modules/prb-math/",
     // "@jbx-protocol/=node_modules/@jbx-protocol/",
   ],
-  "solidity.packageDefaultDependenciesDirectory": "lib"
+  "solidity.packageDefaultDependenciesDirectory": ["lib", "node_modules"]
 }

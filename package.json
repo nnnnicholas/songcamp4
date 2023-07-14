@@ -3,7 +3,10 @@
   "version": "0.0.0",
   "dependencies": {
     "@openzeppelin/contracts": "^4.8.3",
-    "@prb/math": "^4.0.0"
+    "@prb/math": "^4.0.0",
+    "base64-sol": "^1.1.0",
+    "erc721a": "^4.2.3",
+    "fs": "^0.0.1-security"
   },
   "scripts": {
     "preinstall": "forge install",
