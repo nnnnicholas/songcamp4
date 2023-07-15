@@ -85,6 +85,9 @@ contract CD is ERC721A {
         require(claimed[tokenId] == false, "Already claimed");
         // decompose songsToBurn into 4 songs and check that there are 4 songs selected
         require(checkValue(songsToBurn), "Invalid songs");
+        // check that each track is only present once
+        uint8[4] memory songs = decompose(songsToBurn);
+        require(songs[0] != songs[1] && songs[1] != songs[2] && songs[2] != songs[3], "Duplicate songs");
         // check that the songs are valid
         cdToSongs[tokenId] = songsToBurn;
         claimed[tokenId] = true;
