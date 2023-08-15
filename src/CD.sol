@@ -13,8 +13,9 @@ contract CD is ERC721A {
     mapping(uint256 => uint256) public cdToSongs;
     mapping(uint256 => bool) public claimed;
 
-    constructor(uint _price) ERC721A("CAMP4 CDs", "CD") {
+    constructor(uint _price, string memory _baseUri) ERC721A("CAMP4 CDs", "CD") {
         price = _price;
+        baseUri = _baseUri;
     }
 
     function _startTokenId() internal view virtual override returns (uint256) {
@@ -103,6 +104,7 @@ contract CD is ERC721A {
                 tokenId.toString(),
                 '",',
                 '"description":"Description Text",',
+                '"animation_url":"', baseUri, '?tokenId=', tokenId.toString(), '",',
                 '"image":"data:image/svg+xml;base64,'
             )
         );

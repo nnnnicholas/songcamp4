@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.7.0/p5.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.7.0/addons/p5.sound.min.js"></script>
+    <meta charset="utf-8" />
+      <style>
+      html, body {
+        margin: 0;
+        padding: 0;
+      }
+      canvas {
+        display: block;
+      }
+  </style>
+  </head>
+  <body>
+    <main></main>
+    <script>
+      let urlParams = new URLSearchParams(window.location.search);
+      let TOKENID = urlParams.get('tokenId');
+
+      function setup() {
+        createCanvas(400, 400);
+      }
+
+      function draw() {
+        background(220);
+        textSize(32);
+        text("token " + TOKENID, 10, 30);
+      }
+    </script>
+    <!--     <script src="sketch.js"></script> -->
+  </body>
+</html>

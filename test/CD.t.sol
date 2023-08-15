@@ -17,7 +17,7 @@ contract EmptyTest_Unit is Test {
     // uint256 constant FORK_BLOCK_NUMBER = 17149178; // All tests executed at this block
     // string RPC_MAINNET = "RPC_MAINNET";
     // uint256 forkId = vm.createSelectFork(vm.envString(RPC_MAINNET), FORK_BLOCK_NUMBER);
-    CD cd = new CD(0);
+    CD cd = new CD(0, "ipfs://QmSYZdipjfLJyg7kLj9ffKLfx3jLG6LA2vzHHjvjdSRMCh");
 
     function testMint() public {
         cd.mint{value: 0.01 ether}(1);
